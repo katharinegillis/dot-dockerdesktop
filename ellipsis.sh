@@ -5,8 +5,12 @@ pkg.link() {
 }
 
 pkg.install() {
-    # Install PhpStorm
+    # Install Docker Desktop
     bash $PKG_PATH/run.sh "$ELLIPSIS_SRC" "$PKG_PATH"
+
+    # Indicate a restart is needed and exit all installations.
+    echo "" && echo "Please restart the computer and then run 'ellipsis pull desktop-work' from a WSL prompt to continue the installation." &&
+    exit 1
 }
 
 pkg.pull() {
@@ -23,7 +27,7 @@ pkg.pull() {
         pkg.link
     fi
 
-    # Install PhpStorm
+    # Update Docker Desktop
     bash $PKG_PATH/run.sh "$ELLIPSIS_SRC" "$PKG_PATH"
 }
 
