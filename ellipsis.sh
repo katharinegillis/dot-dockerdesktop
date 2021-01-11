@@ -9,7 +9,7 @@ pkg.install() {
     bash $PKG_PATH/run.sh "$ELLIPSIS_SRC" "$PKG_PATH"
 
     # Indicate a restart is needed and exit all installations.
-    echo "" && echo "Please restart the computer and then run 'ellipsis pull desktop-work' from a WSL prompt to continue the installation." &&
+    echo "" && echo -e "\e[33mPlease restart the computer and then run \"\e[0mellipsis pull desktop-work\e[33m\" from a WSL prompt to continue the installation.\e[0m" &&
     exit 1
 }
 
