@@ -1,5 +1,5 @@
 # katharinegillis/dockerdesktop
-Just a bunch of dotfiles.
+Installs Docker Desktop.
 
 ## Install
 Clone and symlink or install with [ellipsis][ellipsis]:
