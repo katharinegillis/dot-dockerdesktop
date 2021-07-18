@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-choco.exe uninstall docker-desktop -y
+SYSTEM=$3
+
+if [ "$SYSTEM" == "wsl" ]; then
+    choco.exe uninstall docker-desktop -y
+fi

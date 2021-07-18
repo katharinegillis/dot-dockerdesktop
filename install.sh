@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-choco.exe install docker-desktop -y
+SYSTEM=$3
 
-touch .restart.lock
+if [ "$SYSTEM" == "wsl" ]; then
+    choco.exe install docker-desktop -y
+    touch .restart.lock
+fi

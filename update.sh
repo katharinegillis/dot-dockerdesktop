@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Please upgrade via Docker Desktop instead of Chocolatey."
+SYSTEM=$3
+
+if [ "$SYSTEM" == "wsl" ]; then
+    echo "Please upgrade via Docker Desktop instead of Chocolatey."
+fi
